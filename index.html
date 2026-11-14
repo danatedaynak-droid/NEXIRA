@@ -1,86 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="KfhLMfEPqIDkeLj4aRhxIT2_8OwdO-rb0GshAj-r8XU" />
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NEXIRA - Sportswear</title>
-<style>
-body {
-  margin: 0;
-  background: #080b12;
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
-header {
-  padding: 25px;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 5px;
-}
-.hero {
-  padding: 100px 15px;
-  background: linear-gradient(#17365b, #080b12);
-}
-h1 {
-  font-size: 55px;
-}
-p {
-  color: #b9c3d2;
-  line-height: 1.7;
-}
-section {
-  padding: 55px 20px;
-}
-button {
-  padding: 15px 30px;
-  background: #1689e8;
-  color: white;
-  border: 0;
-  font-weight: bold;
-}
-footer {
-  padding: 25px;
-  color: #888;
-product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }.
-</style>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="RfhlEFpQIdJ4aKnVT2_8OWd0-rB0GshAj-r0XU" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NEXIRA Official Sportswear Store. Founded by Daynak. Shop hoodies, trousers, t-shirts, shorts, and sweaters built for movement.">
+    <title>NEXIRA - Official Online Store | Sportswear</title>
+
+    <!-- Structured Data for Google Search (Brand, Owner & Products) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://danatedaynak-droid.github.io/NEXIRA/#organization",
+          "name": "NEXIRA",
+          "alternateName": "Nexira Sportswear",
+          "url": "https://danatedaynak-droid.github.io/NEXIRA/",
+          "founder": {
+            "@type": "Person",
+            "name": "Daynak"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://danatedaynak-droid.github.io/NEXIRA/#website",
+          "url": "https://danatedaynak-droid.github.io/NEXIRA/",
+          "name": "NEXIRA Official Store",
+          "publisher": {
+            "@id": "https://danatedaynak-droid.github.io/NEXIRA/#organization"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Nexira Hoodie & Trousers Set",
+          "image": "https://danatedaynak-droid.github.io/NEXIRA/hoodie.jpg",
+          "description": "Official NEXIRA Hoodie & Trousers Set. Built for movement.",
+          "brand": {
+            "@type": "Brand",
+            "name": "NEXIRA"
+          },
+          "offers": {
+            "@type": "Offer",
+            "url": "https://danatedaynak-droid.github.io/NEXIRA/",
+            "priceCurrency": "USD",
+            "price": "50.00",
+            "availability": "https://schema.org/InStock",
+            "itemCondition": "https://schema.org/NewCondition"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            background: #080b12;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header {
+            padding: 25px;
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .hero {
+            padding: 100px 15px;
+            background: linear-gradient(#17365b, #080b12);
+        }
+        h1 {
+            font-size: 55px;
+            margin: 10px 0;
+        }
+        p {
+            color: #b9c3d2;
+            line-height: 1.7;
+        }
+        section {
+            padding: 55px 20px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #1689e8;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .product-card {
+            background: #111622;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+        footer {
+            padding: 25px;
+            color: #888;
+            border-top: 1px solid #1a2234;
+        }
+    </style>
 </head>
 <body>
 
-<header>NEXIRA</header>
+    <header>NEXIRA</header>
 
-<div class="hero">
-<p>BUILT FOR MOVEMENT</p>
-<h1>MOVE WITHOUT LIMITS.</h1>
-<p>Sportswear for those who never stop moving.</p>
-<button>DISCOVER NEXIRA</button>
-</div>
-<div class="product-grid">
-  <div class="product-card">
-    <img src="placeholder.jpg" alt="Product">
-    <p>Nexira Hoodie & Trousers - $50</p>
-  </div>
-  </div>
-<section>
-<h2>OUR FIRST COLLECTION</h2>
-<h3>THE EVERYDAY TEE</h3>
-<p>Lightweight. Comfortable. Made for movement.</p>
-<p>PRODUCT DETAILS COMING SOON</p>
-</section>
+    <div class="hero">
+        <p>BUILT FOR MOVEMENT</p>
+        <h1>MOVE WITHOUT LIMITS.</h1>
+        <p>Sportswear for those who never stop moving.</p>
+        <a href="#products" class="btn">DISCOVER NEXIRA</a>
+    </div>
 
-<section>
-<h2>OUR STORY</h2>
-<p>NEXIRA is built on ambition, confidence and movement. We are starting with one T-shirt and dreaming of something bigger.</p>
-</section>
+    <section id="products">
+        <h2>OUR COLLECTION</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="hoodie.jpg" alt="Nexira Hoodie & Trousers Set">
+                <h3>Nexira Hoodie & Trousers</h3>
+                <p>$50.00</p>
+                <!-- Replace # below with your Stripe Payment Link -->
+                <a href="#" class="btn">BUY NOW</a>
+            </div>
+        </div>
+    </section>
 
-<section>
-<h2>OUR MISSION</h2>
-<p>To create sportswear for everyone who wants to move forward.</p>
-<p>Owner: Daynak</p>
+    <section>
+        <h2>THE EVERYDAY TEE</h2>
+        <p>Lightweight. Comfortable. Made for movement.</p>
+        <p>PRODUCT DETAILS COMING SOON</p>
+    </section>
 
-<footer>© 2026 NEXIRA — MOVE WITHOUT LIMITS.</footer>
+    <section>
+        <h2>OUR STORY</h2>
+        <p>NEXIRA is built on ambition, confidence and movement. We are starting with sportswear designed for everyday performance and dreaming of something bigger.</p>
+    </section>
+
+    <section>
+        <h2>OUR MISSION & LEADERSHIP</h2>
+        <p>To create sportswear for everyone who wants to move forward.</p>
+        <p><strong>Founder & Owner:</strong> Daynak</p>
+    </section>
+
+    <footer>&copy; 2026 NEXIRA - Official Store | Owned by Daynak. All rights reserved.</footer>
 
 </body>
 </html>
+
