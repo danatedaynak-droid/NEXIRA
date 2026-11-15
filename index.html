@@ -1,13 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="RfhlEFpQIdJ4aKnVT2_8OWd0-rB0GshAj-r0XU" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NEXIRA Official Sportswear Store. Founded by Daynak. Shop hoodies, trousers, t-shirts, shorts, and sweaters built for movement.">
-    <title>NEXIRA - Official Online Store | Sportswear</title>
 
-    <!-- Structured Data for Google Search (Brand, Owner & Products) -->
+    <!-- GOOGLE SITE VERIFICATION -->
+    <meta name="google-site-verification" content="KfhLMfEPqIDkeLj4aRhxIT2_8OwdO-rb0GshAj-r8XU" />
+
+    <!-- WEBSITE INFORMATION -->
+    <title>NEXIRA | Official Sportswear Brand</title>
+    <meta name="description" content="Discover NEXIRA, founded by Daynak. Explore modern sportswear designed for movement, confidence and ambition.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://danatedaynak-droid.github.io/NEXIRA/">
+
+    <!-- SOCIAL MEDIA PREVIEW -->
+    <meta property="og:title" content="NEXIRA | Official Sportswear">
+    <meta property="og:description" content="Built for movement. Discover the NEXIRA collection.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://danatedaynak-droid.github.io/NEXIRA/">
+    <meta property="og:image" content="https://danatedaynak-droid.github.io/NEXIRA/hoodie.jpg">
+
+    <!-- GOOGLE TAG MANAGER -->
+    <script>
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WP8XB7MQ');
+    </script>
+
+    <!-- GOOGLE STRUCTURED DATA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -16,11 +43,16 @@
           "@type": "Organization",
           "@id": "https://danatedaynak-droid.github.io/NEXIRA/#organization",
           "name": "NEXIRA",
-          "alternateName": "Nexira Sportswear",
+          "alternateName": "NEXIRA Sportswear",
           "url": "https://danatedaynak-droid.github.io/NEXIRA/",
+          "description": "NEXIRA is a sportswear brand founded by Daynak.",
           "founder": {
             "@type": "Person",
             "name": "Daynak"
+          },
+          "brand": {
+            "@type": "Brand",
+            "name": "NEXIRA"
           }
         },
         {
@@ -34,9 +66,12 @@
         },
         {
           "@type": "Product",
-          "name": "Nexira Hoodie & Trousers Set",
-          "image": "https://danatedaynak-droid.github.io/NEXIRA/hoodie.jpg",
-          "description": "Official NEXIRA Hoodie & Trousers Set. Built for movement.",
+          "@id": "https://danatedaynak-droid.github.io/NEXIRA/#hoodie",
+          "name": "NEXIRA Hoodie & Trousers Set",
+          "image": [
+            "https://danatedaynak-droid.github.io/NEXIRA/hoodie.jpg"
+          ],
+          "description": "The NEXIRA Hoodie and Trousers Set. Sportswear designed for everyday movement.",
           "brand": {
             "@type": "Brand",
             "name": "NEXIRA"
@@ -55,117 +90,496 @@
     </script>
 
     <style>
-        body {
-            margin: 0;
-            background: #080b12;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+      :root {
+        --navy: #071426;
+        --navy-light: #102744;
+        --black: #05070b;
+        --white: #ffffff;
+        --grey: #aab5c4;
+        --border: rgba(255,255,255,0.12);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--black);
+        color: var(--white);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .announcement {
+        background: var(--navy);
+        text-align: center;
+        padding: 9px 15px;
+        font-size: 11px;
+        letter-spacing: 2px;
+        color: #dce7f5;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(5,7,11,0.96);
+        border-bottom: 1px solid var(--border);
+        padding: 19px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 27px;
+        font-weight: 900;
+        letter-spacing: 5px;
+      }
+
+      nav {
+        display: flex;
+        gap: 28px;
+      }
+
+      nav a {
+        font-size: 12px;
+        letter-spacing: 1px;
+        color: var(--grey);
+        transition: color .2s;
+      }
+
+      nav a:hover {
+        color: var(--white);
+      }
+
+      .hero {
+        min-height: 570px;
+        padding: 110px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background:
+          radial-gradient(ellipse at 50% 20%, #173b63 0%, transparent 55%),
+          linear-gradient(145deg, #0c1b30, #05070b 75%);
+      }
+
+      .eyebrow {
+        color: #a9c8ec;
+        letter-spacing: 5px;
+        font-size: 11px;
+        font-weight: bold;
+        margin-bottom: 22px;
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 8vw, 86px);
+        line-height: 1.05;
+        letter-spacing: -3px;
+        max-width: 950px;
+        margin-bottom: 22px;
+      }
+
+      .hero p {
+        color: var(--grey);
+        max-width: 560px;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 14px 30px;
+        background: var(--white);
+        color: var(--black);
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: .2s;
+      }
+
+      .button:hover {
+        background: #cbdcf0;
+        transform: translateY(-2px);
+      }
+
+      section {
+        padding: 85px 7%;
+      }
+
+      .section-heading {
+        text-align: center;
+        margin-bottom: 45px;
+      }
+
+      .section-heading span {
+        color: #9bbce2;
+        letter-spacing: 4px;
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(28px, 5vw, 42px);
+        margin-top: 10px;
+        letter-spacing: 1px;
+      }
+
+      .products {
+        max-width: 1150px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+      }
+
+      .product-card {
+        background: #0c111b;
+        border: 1px solid var(--border);
+        padding: 17px;
+        transition: transform .25s, border-color .25s;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        border-color: #597da6;
+      }
+
+      .product-card img {
+        width: 100%;
+        display: block;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        background: #101b2b;
+      }
+
+      .product-info {
+        padding: 22px 5px 8px;
+      }
+
+      .product-info h3 {
+        font-size: 18px;
+        margin-bottom: 7px;
+      }
+
+      .product-info p {
+        color: var(--grey);
+        font-size: 14px;
+      }
+
+      .price {
+        color: var(--white) !important;
+        font-size: 18px !important;
+        font-weight: bold;
+        margin-top: 13px;
+      }
+
+      .product-link {
+        display: inline-block;
+        margin-top: 18px;
+        padding: 11px 19px;
+        border: 1px solid var(--white);
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+
+      .product-link:hover {
+        background: var(--white);
+        color: var(--black);
+      }
+
+      .coming-soon {
+        margin-top: 15px;
+        display: inline-block;
+        color: #a9c8ec;
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
+
+      .story {
+        background: linear-gradient(135deg, #0c1c31, #080b12);
+        text-align: center;
+      }
+
+      .story-content {
+        max-width: 760px;
+        margin: auto;
+      }
+
+      .story-content p {
+        color: var(--grey);
+        margin-top: 18px;
+        font-size: 16px;
+      }
+
+      .founder {
+        text-align: center;
+      }
+
+      .founder-card {
+        max-width: 700px;
+        margin: auto;
+        padding: 42px 25px;
+        border: 1px solid var(--border);
+        background: #0c111b;
+      }
+
+      .founder-card h3 {
+        font-size: 30px;
+        letter-spacing: 3px;
+      }
+
+      .founder-card p {
+        color: var(--grey);
+        margin-top: 12px;
+      }
+
+      footer {
+        background: #030509;
+        border-top: 1px solid var(--border);
+        text-align: center;
+        padding: 38px 20px;
+      }
+
+      footer .logo {
+        font-size: 22px;
+      }
+
+      footer p {
+        color: var(--grey);
+        font-size: 12px;
+        margin-top: 12px;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 18px;
+      }
+
+      .footer-links a {
+        color: var(--grey);
+        font-size: 12px;
+      }
+
+      @media (max-width: 650px) {
         header {
-            padding: 25px;
-            font-size: 25px;
-            font-weight: bold;
-            letter-spacing: 2px;
+          padding: 16px 5%;
+          flex-direction: column;
+          gap: 12px;
         }
+
+        .logo {
+          font-size: 24px;
+        }
+
+        nav {
+          gap: 17px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav a {
+          font-size: 10px;
+        }
+
         .hero {
-            padding: 100px 15px;
-            background: linear-gradient(#17365b, #080b12);
+          min-height: 480px;
+          padding: 80px 18px;
         }
-        h1 {
-            font-size: 55px;
-            margin: 10px 0;
-        }
-        p {
-            color: #b9c3d2;
-            line-height: 1.7;
-        }
+
         section {
-            padding: 55px 20px;
+          padding: 65px 6%;
         }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #1689e8;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .product-card {
-            background: #111622;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .product-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        footer {
-            padding: 25px;
-            color: #888;
-            border-top: 1px solid #1a2234;
-        }
+      }
     </style>
 </head>
-  <meta name="google-site-verification" content="KfhLMfEPqIDkeLj4aRhxIT2_8OwdO-rb0GshAj-r8XU" />
-<body>
-<script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WP8XB7MQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-</script>
-    <header>NEXIRA</header>
 
-    <div class="hero">
-        <p>BUILT FOR MOVEMENT</p>
-        <h1>MOVE WITHOUT LIMITS.</h1>
-        <p>Sportswear for those who never stop moving.</p>
-        <a href="#products" class="btn">DISCOVER NEXIRA</a>
+<body>
+
+    <!-- GOOGLE TAG MANAGER NOSCRIPT -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WP8XB7MQ"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden">
+      </iframe>
+    </noscript>
+
+    <div class="announcement">
+      NEXIRA — BUILT FOR MOVEMENT
     </div>
 
-    <section id="products">
-        <h2>OUR COLLECTION</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="hoodie.jpg" alt="Nexira Hoodie & Trousers Set">
-                <h3>Nexira Hoodie & Trousers</h3>
-                <p>$50.00</p>
-                <!-- Replace # below with your Stripe Payment Link -->
-                <a href="#" class="btn">BUY NOW</a>
-            </div>
+    <header>
+      <a href="#" class="logo">NEXIRA</a>
+
+      <nav>
+        <a href="#home">HOME</a>
+        <a href="#products">COLLECTION</a>
+        <a href="#story">OUR STORY</a>
+        <a href="#founder">FOUNDER</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <span class="eyebrow">THE NEXIRA MOVEMENT</span>
+
+        <h1>MOVE WITHOUT LIMITS.</h1>
+
+        <p>
+          Sportswear created for ambition, confidence and movement.
+          Discover the beginning of NEXIRA.
+        </p>
+
+        <a href="#products" class="button">
+          DISCOVER THE COLLECTION
+        </a>
+      </section>
+
+      <!-- PRODUCTS -->
+      <section id="products">
+        <div class="section-heading">
+          <span>THE COLLECTION</span>
+          <h2>OUR PRODUCTS</h2>
         </div>
-    </section>
 
-    <section>
-        <h2>THE EVERYDAY TEE</h2>
-        <p>Lightweight. Comfortable. Made for movement.</p>
-        <p>PRODUCT DETAILS COMING SOON</p>
-    </section>
+        <div class="products">
 
-    <section>
-        <h2>OUR STORY</h2>
-        <p>NEXIRA is built on ambition, confidence and movement. We are starting with sportswear designed for everyday performance and dreaming of something bigger.</p>
-    </section>
+          <article class="product-card">
+            <img
+              src="hoodie.jpg"
+              alt="NEXIRA hoodie and trousers sportswear set"
+              loading="eager">
 
-    <section>
-        <h2>OUR MISSION & LEADERSHIP</h2>
-        <p>To create sportswear for everyone who wants to move forward.</p>
-        <p><strong>Founder & Owner:</strong> Daynak</p>
-    </section>
+            <div class="product-info">
+              <h3>NEXIRA Hoodie &amp; Trousers</h3>
 
-    <footer>&copy; 2026 NEXIRA - Official Store | Owned by Daynak. All rights reserved.</footer>
+              <p>
+                A sportswear set designed for everyday movement
+                and comfort.
+              </p>
+
+              <p class="price">$50.00</p>
+
+              <!-- ADD YOUR REAL PAYMENT LINK HERE -->
+              <a href="#contact" class="product-link">
+                PRODUCT INFORMATION
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- COMING SOON -->
+      <section class="story">
+        <div class="story-content">
+          <div class="section-heading">
+            <span>COMING NEXT</span>
+            <h2>THE EVERYDAY TEE</h2>
+          </div>
+
+          <p>
+            Lightweight. Comfortable. Made for movement.
+          </p>
+
+          <p class="coming-soon">PRODUCT DETAILS COMING SOON</p>
+        </div>
+      </section>
+
+      <!-- OUR STORY -->
+      <section id="story">
+        <div class="story-content">
+          <div class="section-heading">
+            <span>WHO WE ARE</span>
+            <h2>THE NEXIRA STORY</h2>
+          </div>
+
+          <p>
+            NEXIRA was created from a dream: to build a sportswear
+            brand that represents ambition, confidence and progress.
+          </p>
+
+          <p>
+            We believe movement is more than sport. It is a mindset.
+            Every journey starts somewhere. This is ours.
+          </p>
+        </div>
+      </section>
+
+      <!-- FOUNDER -->
+      <section class="founder" id="founder">
+        <div class="section-heading">
+          <span>THE PERSON BEHIND THE DREAM</span>
+          <h2>OUR FOUNDER</h2>
+        </div>
+
+        <div class="founder-card">
+          <h3>DAYNAK</h3>
+
+          <p><strong>Founder &amp; Creator of NEXIRA</strong></p>
+
+          <p>
+            NEXIRA began with a vision to create something meaningful.
+            Built with ambition, determination and a passion for
+            sportswear.
+          </p>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="story" id="contact">
+        <div class="story-content">
+          <div class="section-heading">
+            <span>STAY CONNECTED</span>
+            <h2>THE JOURNEY STARTS HERE</h2>
+          </div>
+
+          <p>
+            Thank you for discovering NEXIRA.
+            More products and updates are coming.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="logo">NEXIRA</div>
+
+      <p>BUILT FOR MOVEMENT. CREATED WITH AMBITION.</p>
+
+      <div class="footer-links">
+        <a href="#home">HOME</a>
+        <a href="#products">PRODUCTS</a>
+        <a href="#story">OUR STORY</a>
+        <a href="#founder">FOUNDER</a>
+      </div>
+
+      <p>
+        &copy; 2026 NEXIRA. Founded by Daynak. All rights reserved.
+      </p>
+    </footer>
 
 </body>
 </html>
-
